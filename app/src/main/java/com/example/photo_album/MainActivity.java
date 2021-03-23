@@ -12,6 +12,7 @@ import android.util.Log;
 import com.cooltechworks.views.shimmer.ShimmerRecyclerView;
 import com.example.photo_album.adapters.ImageAdapter;
 import com.example.photo_album.models.ImageModel;
+import com.example.photo_album.utils.ApplicationConstant;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -52,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
                 ImageModel imageModel = new ImageModel();
                 if (!obj.isNull("copyright")){
                     imageModel.setCopyRight(obj.getString("copyright"));
+                }else{
+                    imageModel.setCopyRight("Anonymous");
                 }
                 imageModel.setDate(obj.getString("date"));
                 imageModel.setExplanation(obj.getString("explanation"));
@@ -63,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
                 arrayList.add(imageModel);
 
             }
-
+            ApplicationConstant.sharedArray.clear();
+            ApplicationConstant.sharedArray = arrayList;
             imageAdapter = new ImageAdapter(MainActivity.this, arrayList);
             mRecyclerView.setHasFixedSize(true);
             RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(MainActivity.this, 2);
