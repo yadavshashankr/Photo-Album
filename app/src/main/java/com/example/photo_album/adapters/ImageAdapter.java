@@ -15,6 +15,8 @@ import com.example.photo_album.ImageDetailActivity;
 import com.example.photo_album.R;
 import com.example.photo_album.holders.ImageHolder;
 import com.example.photo_album.models.ImageModel;
+import com.facebook.shimmer.Shimmer;
+import com.facebook.shimmer.ShimmerDrawable;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -43,6 +45,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageHolder> {
 
     @Override
     public void onBindViewHolder(final ImageHolder holder, final int position) {
+
         final int positionTrue= position;
         holder.setIsRecyclable(false);
         final ImageModel imageModel = mImageDet.get(position);

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="wrap_content"
-    android:background="@android:color/white"
     android:layout_height="wrap_content">
 
 
@@ -9,9 +8,10 @@
         android:layout_marginLeft="0.5dp"
         android:layout_marginRight="0.5dp"
         android:layout_marginBottom="0.5dp"
+        android:background="@color/shimmer_placeholder"
         android:layout_marginTop="0.5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:id="@+id/iv_image"
         />
 

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/black"
+    android:layout_height="match_parent">
+
+
+
+
+    <ImageView
+        android:id="@+id/iv_obvious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/obvious"
+        android:layout_centerHorizontal="true"
+        android:translationY="2000dp"
+        android:layout_centerInParent="true"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_shashank"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:textSize="22sp"
+        android:text="Shashank Yadav"
+        android:translationY="2000dp"
+        android:textColor="@android:color/white"
+        android:textAlignment="center"/>
+
+
+
+
+
+
+</RelativeLayout>
