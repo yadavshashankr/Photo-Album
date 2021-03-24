@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@color/black"
+    android:id="@+id/rl_swiper"
     android:layout_height="match_parent"
     tools:context=".ImageDetailActivity">
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/ns_swipe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fillViewport="true">

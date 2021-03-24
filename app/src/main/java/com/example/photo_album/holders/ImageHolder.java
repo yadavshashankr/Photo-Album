@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.photo_album.R;
 
 
+
 public class ImageHolder extends RecyclerView.ViewHolder {
 
     public ImageView iv_image;

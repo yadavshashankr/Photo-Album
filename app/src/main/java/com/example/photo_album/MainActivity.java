@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.cooltechworks.views.shimmer.ShimmerRecyclerView;
+
 import com.example.photo_album.adapters.ImageAdapter;
 import com.example.photo_album.models.ImageModel;
 import com.example.photo_album.utils.ApplicationConstant;
@@ -25,23 +25,20 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+
+
 public class MainActivity extends AppCompatActivity {
     RecyclerView mRecyclerView;
     ImageAdapter imageAdapter;
-
     ArrayList<ImageModel> arrayList;
 
-    private ShimmerFrameLayout mFrameLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mRecyclerView = findViewById(R.id.rv_images);
-        mFrameLayout = findViewById(R.id.shimmerLayout);
-        //Initial Commit now
-        mFrameLayout.setVisibility(View.VISIBLE);
-        mFrameLayout.startShimmer();
+
 
 
 
@@ -84,8 +81,7 @@ public class MainActivity extends AppCompatActivity {
             mRecyclerView.setItemAnimator(new DefaultItemAnimator());
             mRecyclerView.setAdapter(imageAdapter);
             imageAdapter.notifyDataSetChanged();
-            mFrameLayout.stopShimmer();
-            mFrameLayout.setVisibility(View.GONE);
+
             mRecyclerView.setVisibility(View.VISIBLE);
 
         } catch (JSONException e) {
@@ -112,13 +108,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        mFrameLayout.startShimmer();
+
         super.onResume();
     }
 
     @Override
     protected void onPause() {
-        mFrameLayout.stopShimmer();
+
         super.onPause();
     }
 }

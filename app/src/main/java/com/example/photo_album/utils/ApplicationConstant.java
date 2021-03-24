@@ -2,6 +2,8 @@ package com.example.photo_album.utils;
 
 
 
+import android.graphics.Bitmap;
+
 import com.example.photo_album.BuildConfig;
 import com.example.photo_album.models.ImageModel;
 
@@ -14,4 +16,5 @@ public class ApplicationConstant {
     public static ArrayList<ImageModel> sharedArray= new ArrayList<>();
 
 
+    public static Bitmap bitmap;
 }
