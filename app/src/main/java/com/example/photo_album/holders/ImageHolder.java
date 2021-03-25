@@ -18,11 +18,13 @@ import com.example.photo_album.R;
 public class ImageHolder extends RecyclerView.ViewHolder {
 
     public ImageView iv_image;
+    public TextView tv_copy;
 
 
     public ImageHolder(View itemView) {
         super(itemView);
         iv_image = itemView.findViewById(R.id.iv_image);
+        tv_copy = itemView.findViewById(R.id.tv_copy);
 
     }
 }

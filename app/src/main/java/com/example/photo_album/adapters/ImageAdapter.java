@@ -72,7 +72,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageHolder> {
 
 
 
-
+            holder.tv_copy.setText(imageModel.getCopyRight());
 
         if (imageModel.getUrl() != null && !imageModel.getUrl().isEmpty()){
             Picasso.get()
@@ -103,7 +103,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageHolder> {
 
 
 
-
+                 holder.tv_copy.animate().translationY(0);
 
 
 

@@ -14,6 +14,7 @@ import android.view.View;
 import com.example.photo_album.adapters.ImageAdapter;
 import com.example.photo_album.models.ImageModel;
 import com.example.photo_album.utils.ApplicationConstant;
+import com.example.photo_album.utils.PlayGifView;
 import com.facebook.shimmer.ShimmerFrameLayout;
 
 import org.json.JSONArray;
@@ -38,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mRecyclerView = findViewById(R.id.rv_images);
+        PlayGifView pGif = (PlayGifView) findViewById(R.id.gifvw_univ);
 
+        pGif.setImageResource(R.drawable.univ_gif);
         //Test
 
 
