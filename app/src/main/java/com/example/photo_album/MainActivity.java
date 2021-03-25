@@ -1,11 +1,14 @@
 package com.example.photo_album;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -119,5 +122,30 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
 
         super.onPause();
+    }
+
+
+    @Override
+    public void onBackPressed() {
+
+
+            new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit Application ?")
+                    .setMessage("Are you sure you want to exit?")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            Intent intent = new Intent(Intent.ACTION_MAIN);
+                            intent.addCategory(Intent.CATEGORY_HOME);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            /*if(HomePageViewerAdapter.newsList.size()!=0) {
+                                HomePageViewerAdapter.newsList.clear();
+                            }*/ //Added by Sagar
+                            startActivity(intent);
+                            finishAffinity();
+
+                        }
+                    }).setNegativeButton("No", null).show();
+
     }
 }
