@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
+import android.widget.Toast;
 
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.recyclerview.widget.RecyclerView;
@@ -85,18 +86,23 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageHolder> {
 
         }
 
+
+
             holder.iv_image.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
-                    ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) mContext,holder.iv_image,"imageMain");
-                    Intent i = new Intent(mContext, ImageDetailActivity.class);
-                    i.putExtra("position", String.valueOf(position));
-                    i.putExtra("fromWhere", "IA");
-                    ApplicationConstant.bitmap =((BitmapDrawable)holder.iv_image.getDrawable()).getBitmap();
-                    mContext.startActivity(i, activityOptionsCompat.toBundle());
+                        ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) mContext, holder.iv_image, "imageMain");
+                        Intent i = new Intent(mContext, ImageDetailActivity.class);
+                        i.putExtra("position", String.valueOf(position));
+                        i.putExtra("fromWhere", "IA");
+                        mContext.startActivity(i, activityOptionsCompat.toBundle());
+
                 }
             });
+
+
+
 
 
 

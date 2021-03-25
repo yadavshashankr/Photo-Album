@@ -36,7 +36,7 @@
 
             <LinearLayout
                 android:id="@+id/ll_translate"
-                android:translationY="2000dp"
+                android:translationY="0dp"
                 android:layout_below="@+id/v_view"
                 android:padding="10dp"
                 android:layout_width="match_parent"
@@ -98,7 +98,13 @@
 
                     </LinearLayout>
 
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"/>
+
                     <LinearLayout
+                        android:layout_marginLeft="10dp"
                         android:padding="5dp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -126,6 +132,75 @@
 
                 </LinearLayout>
 
+                <RelativeLayout
+                    android:layout_marginBottom="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_centerVertical="true"
+                        android:id="@+id/rl_left"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_alignParentStart="true"
+                            android:src="@drawable/ic_baseline_chevron_left_24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/iv_swip_left"/>
+
+                        <ImageView
+                            android:layout_marginLeft="-15dp"
+                            android:layout_toRightOf="@+id/iv_swip_left"
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/ic_baseline_chevron_left_24"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/iv_swip_left_2"/>
+
+                    </RelativeLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/tv_exp"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:text="Explanation"
+                        android:textColor="@android:color/white"
+                        android:textSize="22sp"
+                        android:gravity="center_vertical"
+                        android:textStyle="bold"/>
+
+                    <RelativeLayout
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/tv_exp"
+                        android:id="@+id/rl_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_baseline_chevron_right_36"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/iv_swip_right"/>
+
+
+                        <ImageView
+                            android:layout_marginRight="-15dp"
+                            android:layout_toStartOf="@+id/iv_swip_right"
+                            android:src="@drawable/ic_baseline_chevron_right_36"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/iv_swip_right_2"/>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
                 <LinearLayout
                     android:layout_marginBottom="30dp"
                     android:padding="5dp"
@@ -134,14 +209,7 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:text="Explanation"
-                        android:textColor="@android:color/white"
-                        android:textSize="22sp"
-                        android:gravity="center_vertical"
-                        android:textStyle="bold"/>
+
 
                     <TextView
                         android:id="@+id/tv_explain"
