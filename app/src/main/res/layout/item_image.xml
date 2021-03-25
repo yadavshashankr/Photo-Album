@@ -6,25 +6,25 @@
 
 
     <ImageView
-        android:layout_marginLeft="0.5dp"
-        android:layout_marginRight="0.5dp"
-        android:layout_marginBottom="0.5dp"
+        android:layout_marginLeft="@dimen/_1sdp"
+        android:layout_marginRight="@dimen/_1sdp"
+        android:layout_marginBottom="@dimen/_1sdp"
         android:background="@android:color/darker_gray"
-        android:layout_marginTop="0.5dp"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
         android:id="@+id/iv_image"
         />
 
     <TextView
-        android:padding="2dp"
+        android:padding="@dimen/_1sdp"
         android:id="@+id/tv_copy"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="210dp"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_165sdp"
         android:text="Hello"
         android:gravity="center"
-        android:textSize="14sp"
+        android:textSize="@dimen/_12ssp"
         android:textAlignment="center"
         android:background="#60000000"
         android:textStyle="bold"/>

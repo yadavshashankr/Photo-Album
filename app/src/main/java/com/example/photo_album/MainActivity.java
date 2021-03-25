@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         PlayGifView pGif = (PlayGifView) findViewById(R.id.gifvw_univ);
 
         pGif.setImageResource(R.drawable.univ_gif);
-        //Test
 
 
 
@@ -138,9 +137,6 @@ public class MainActivity extends AppCompatActivity {
                             Intent intent = new Intent(Intent.ACTION_MAIN);
                             intent.addCategory(Intent.CATEGORY_HOME);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            /*if(HomePageViewerAdapter.newsList.size()!=0) {
-                                HomePageViewerAdapter.newsList.clear();
-                            }*/ //Added by Sagar
                             startActivity(intent);
                             finishAffinity();
 
