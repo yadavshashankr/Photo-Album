@@ -12,11 +12,14 @@
         android:roundIcon="@drawable/shashank_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".ImageDetailActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ImageDetailActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
         </activity>
 
-        <activity android:name=".SplashActivity">
+        <activity android:name=".SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
